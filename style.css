@@ -139,7 +139,7 @@ hr {
     border-bottom: 2px solid #feca06;
 }
 
-#grid {
+.grid {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
@@ -148,7 +148,7 @@ hr {
     margin-top: 3%;
 }
 
-#grille {
+.grille {
     display: grid;
     width: 100%;
     grid-template-columns: 0.8fr 5fr 10fr;
@@ -158,11 +158,11 @@ hr {
     color: #4a4a4a;
 }
 
-#grille i {
+.grille i {
     font-size: 0.7em;
 }
 
-#area_B {
+.area_B {
     font-weight: 600;
 }
 
@@ -195,7 +195,7 @@ a:hover {
         padding-bottom: 0%;
     }
 
-    #grid {
+    .grid {
         margin-bottom: 5%;
     }
 
@@ -209,5 +209,4 @@ a:hover {
         margin: auto;
     }
 
-    
 }
