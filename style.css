@@ -76,7 +76,13 @@ aside {
 #loisirs {
     text-align: center;
     font-size: 2em;
-    word-spacing: 1.5em;
+    word-spacing: 0.5em;
+}
+
+#loisirs i {
+    border: solid #4a4a4a 2px;
+    border-radius: 50%;
+    padding: 2%;
 }
 
 a {
