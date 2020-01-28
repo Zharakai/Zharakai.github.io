@@ -226,3 +226,16 @@ hr {
         margin: auto;
     }
 }
+
+/* Media Queries pour les écrans de grandes tailles */
+
+@media all and (min-width: 2560px)
+{
+    header h2 {
+        margin-top: 0em;
+    }
+
+    header h1 {
+        margin-bottom: auto;
+    }
+}
