@@ -121,10 +121,7 @@ main h3 {
 
 h1 {
     font-size: 3em;
-}
-
-h1 {
-	font-family: 'aaarghnormal', calibri, sans-serif;
+    font-family: 'aaarghnormal', calibri, sans-serif;
 }
 
 h1, h3 {
@@ -220,11 +217,11 @@ hr {
     }
 
     main {
-        order: 3;
+        order: 2;
     }
 
     aside {
-        order: 2;
+        order: 1;
         max-width: 100%;
         margin: auto;
     }
