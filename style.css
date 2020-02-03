@@ -79,7 +79,7 @@ aside {
     word-spacing: 0.5em;
 }
 
-#loisirs i {
+#loisirs i { /* Icones dans loisirs */
     border: solid #4a4a4a 2px;
     border-radius: 50%;
     padding: 2%;
@@ -97,7 +97,7 @@ a:hover {
 /* Partie CV */
 
 .underline {
-    text-decoration: underline #feca06;
+    text-decoration: underline #feca06; /* Décoration sous le titre developpeur */
     text-underline-position: under;
 }
 
@@ -125,7 +125,7 @@ h1 {
 }
 
 h1, h3 {
-	text-transform: uppercase;
+	text-transform: uppercase; /* Transforme en majuscule */
 }
 
 h2, h3 {
@@ -146,7 +146,7 @@ main p {
     margin-bottom: 1%;
 }
 
-mark {	
+mark { /* Marquer le prénom du h1 */
 	color: #feca06;
 	background-color: white;
 }
@@ -156,9 +156,9 @@ strong {
     font-size: 1.3em;
 }
 
-hr {
+hr { /* Bordure sous les titres du CV */
     border: none;
-    border-bottom: 2px solid #feca06;
+    border-bottom: 2px solid #feca06; 
 }
 
 .texte_gras {
@@ -166,7 +166,7 @@ hr {
 }
 
 .lighter {
-    font-weight: 100;
+    font-weight: 100; /* Affiner le nom du h1 */
 }
 
 /* Grid template columns */
@@ -232,7 +232,7 @@ hr {
 @media all and (min-width: 2560px)
 {
     header h2 {
-        margin-top: 0em;
+        margin-top: auto;
     }
 
     header h1 {
