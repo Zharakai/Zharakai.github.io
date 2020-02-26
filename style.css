@@ -1,241 +1,665 @@
-﻿/* Police personnalisée */
-
-@font-face {
-    font-family: 'aaarghnormal';
-    src: url('fonts/Aaargh-webfont.eot');
-    src: url('fonts/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Aaargh-webfont.woff2') format('woff2'),
-         url('fonts/Aaargh-webfont.woff') format('woff'),
-         url('fonts/Aaargh-webfont.ttf') format('truetype'),
-         url('fonts/Aaargh-webfont.svg#aaarghnormal') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-/* Page entière */
-
+@charset "UTF-8";
 #bloc_page {
-    max-width: 76%;
-    margin: auto;
-    display: flex;
+  margin: auto;
+  max-width: 100%;
 }
 
-/* Header */
+body {
+  margin: 0rem;
+}
 
 header {
-    padding-bottom: 8%;
-    margin-bottom: 10%;
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  color: #fdcb46;
+  font-size: 1.5em;
+  background-color: #579c87;
+  padding: 0.5rem 0;
 }
 
-header h2 {
-    color: #4a4a4a;
-    margin-top: -5%;
-    font-size: 1.5em;
+article {
+  display: flex;
+  margin: auto;
+  max-height: fit-content;
 }
 
-/* Aside */
-
-aside {
-	background-color: #feca06;
-    max-width: 32%;
-    margin-top: -1%;
-    margin-bottom: -1%;
-    padding-top: 5% ;
-    order: 1;
+/* Page principale */
+.menu {
+  max-width: 100%;
+  transform: scale(1);
+  transition: ease-in-out 250ms;
+  opacity: 1;
+  margin-bottom: -4%;
+}
+.menu:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
 }
 
-.information {
-	background-color: #404040;
-    color: #feca06;
-    text-align: center;
-    padding: 2% 0%;
+.menu_note {
+  margin: 5% 2.5% 2.5% 10%;
+  box-shadow: 0px 0px 8px #00000050;
+  overflow: hidden;
 }
 
-#portrait {
-    text-align: center;
+.menu_chic {
+  margin: 5% 10% 2.5% 2.5%;
+  box-shadow: 0px 0px 8px #00000050;
+  overflow: hidden;
 }
 
-.photo {
-    border: 3px rgba(0, 0, 0, 0.247) solid;
-    border-radius: 150px;
+.menu_delice {
+  margin: 2.5% 2.5% 10% 10%;
+  box-shadow: 0px 0px 8px #00000050;
+  overflow: hidden;
 }
 
-#contact {
-    padding-left: 10%;
-    font-weight: bold;
+.menu_palette {
+  margin: 2.5% 10% 10% 2.5%;
+  box-shadow: 0px 0px 8px #00000050;
+  overflow: hidden;
 }
 
-#a_propos {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 90%;
-    text-align: justify;
+.btn__future {
+  font-family: "Prompt", sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 1.5em;
+  margin: auto;
+  margin-bottom: 8%;
+  text-align: center;
+  color: #fdcb46;
+  background-color: #579c87;
+  border-radius: 1rem;
+  padding: 1% 5%;
+  width: 230px;
+  margin-bottom: 25%;
 }
 
-#loisirs {
-    text-align: center;
-    font-size: 2em;
-    word-spacing: 0.5em;
+/* Animation points de suspensions */
+.spinner {
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
-#loisirs i { /* Icones dans loisirs */
-    border: solid #4a4a4a 2px;
-    border-radius: 50%;
-    padding: 2%;
+.spinner > div {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #fdcc46dc;
+  border-radius: 100%;
+  display: inline-block;
+  animation: bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+/* Pied de page */
+@keyframes wiggle {
+  25% {
+    transform: translateX(4%);
+  }
+  75% {
+    transform: translateX(-4%);
+  }
+}
+footer {
+  font-family: "Prompt", sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: #579c87;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5% 0;
+}
+
+.legal {
+  display: inline-block;
+}
+.legal:hover {
+  animation: wiggle 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+}
+
+.contact {
+  display: inline-block;
+}
+.contact:hover {
+  animation: wiggle 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
 }
 
 a {
-    text-decoration: none;
-    color: #4a4a4a;
+  text-decoration: none;
+  color: #fdcb46;
 }
 
-a:hover {
-    text-decoration: underline;
+.grid {
+  display: grid;
+  display: flex;
+}
+.grid .areaA {
+  flex: 1;
+  text-align: left;
+  margin-left: 2%;
+}
+.grid .areaB {
+  flex: 1;
+  text-align: right;
+  margin-right: 2%;
 }
 
-/* Partie CV */
-
-.underline {
-    text-decoration: underline #feca06; /* Décoration sous le titre developpeur */
-    text-underline-position: under;
-}
-
-main {
-    flex-direction: column;
-    padding-top: 5%;
-    padding-left: 5%;
-    order: 2;
-}
-
-main i {
-    color: #feca06;
-    font-size: 1.3em;
-    padding-right: 4%;
-}
-
-main h3 {
-    margin-bottom: 1%;
-    font-size: 1.8em;
-}
-
+/* Pages de menus */
 h1 {
-    font-size: 3em;
-    font-family: 'aaarghnormal', calibri, sans-serif;
+  text-align: center;
+  font-family: "Prompt", sans-serif;
 }
 
-h1, h3 {
-	text-transform: uppercase; /* Transforme en majuscule */
+section h2, h3 {
+  text-align: center;
 }
 
-h2, h3 {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-h3 {
-    font-size:  1.5em;
+section {
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
 }
 
 p {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	color: #4a4a4a;
+  position: relative;
+  /* Alignement pour les prix des menus */
 }
 
-main p {
-    margin-top: 1%;
-    margin-bottom: 1%;
+.price {
+  position: absolute;
+  /* Alignement pour les prix des menus */
+  right: 0rem;
 }
 
-mark { /* Marquer le prénom du h1 */
-	color: #feca06;
-	background-color: white;
+/* Menu La note enchantée */
+.section__note {
+  background-color: #fcdfdb;
+  color: #3d1319;
+  font-family: "Sriracha", cursive, sans-serif;
+  padding-bottom: 1%;
+  margin-bottom: 15%;
+}
+.section__note i {
+  background: linear-gradient(90deg, #ef465f, #f6916a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-strong {
-    text-transform: uppercase;
-    font-size: 1.3em;
+.itunes-note {
+  text-align: center;
+  font-size: 3rem;
 }
 
-hr { /* Bordure sous les titres du CV */
-    border: none;
-    border-bottom: 2px solid #feca06; 
+.h2__note, .h3__note {
+  font-family: "Devonshire", cursive, sans-serif;
+  font-weight: 100;
 }
 
-.texte_gras {
-    font-weight: 600;
+.h2__note {
+  font-size: 3rem;
+  margin-top: auto;
 }
 
-.lighter {
-    font-weight: 100; /* Affiner le nom du h1 */
+.h3__note {
+  font-size: 2rem;
 }
 
-/* Grid template columns */
-
-.grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4a4a4a;
-    margin-top: 3%;
+.h3__prelude, .h3__orgue, .h3__final {
+  position: relative;
+}
+.h3__prelude::before, .h3__orgue::before, .h3__final::before {
+  /* Bordures de décoration (note enchantée) */
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 40%;
+  left: 0px;
+  top: 50%;
+  background: #3d1319;
+  border-radius: 5rem;
+}
+.h3__prelude::after, .h3__orgue::after, .h3__final::after {
+  /* Bordures de décoration (note enchantée) */
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 40%;
+  right: 0px;
+  top: 50%;
+  background: #3d1319;
+  border-radius: 5rem;
+}
+.h3__prelude a, .h3__orgue a, .h3__final a {
+  /* Animation pour souligner de gauche à droite entrées/plats/desserts (note enchantée) */
+  position: relative;
+  color: #3d1319;
+  text-decoration: none;
+}
+.h3__prelude a:hover, .h3__orgue a:hover, .h3__final a:hover {
+  color: #3d1319;
+}
+.h3__prelude a:hover::before, .h3__orgue a:hover::before, .h3__final a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.h3__prelude a::before, .h3__orgue a::before, .h3__final a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3d1319;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+  transform-origin: left;
 }
 
-.grille {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 0.8fr 5fr 10fr;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: #4a4a4a;
+/* Menu Le chic à la française */
+.section__chic {
+  background-color: #fff5fe;
+  font-family: "Noto Serif", serif, sans-serif;
+  padding-bottom: 2%;
+}
+.section__chic p {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.section__chic h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: relative;
+}
+.section__chic h3::before {
+  /* Bordures de décoration */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35%;
+  left: 0px;
+  top: 50%;
+  border-top: solid 6px;
+  border-radius: 60% 0 0 60%;
+}
+.section__chic h3::after {
+  /* Bordures de décoration */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35%;
+  right: 0px;
+  top: 50%;
+  border-top: solid 6px;
+  border-radius: 0 60% 60% 0;
+}
+.section__chic .h2__chic {
+  font-family: "Croissant One", cursive, sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #e38913, #8f5bfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.section__chic .chic__entrance {
+  color: #c67412;
+}
+.section__chic .chic__entrance a {
+  /* Animation pour souligner de gauche à droite entrées/plats/desserts (chic à la française) */
+  position: relative;
+  color: #c67412;
+  text-decoration: none;
+}
+.section__chic .chic__entrance a:hover {
+  color: #c67412;
+}
+.section__chic .chic__entrance a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.section__chic .chic__entrance a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c67412;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+  transform-origin: left;
+}
+.section__chic .chic__main {
+  color: #a56799;
+}
+.section__chic .chic__main a {
+  /* Animation pour souligner de gauche à droite entrées/plats/desserts (chic à la française) */
+  position: relative;
+  color: #a56799;
+  text-decoration: none;
+}
+.section__chic .chic__main a:hover {
+  color: #a56799;
+}
+.section__chic .chic__main a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.section__chic .chic__main a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #a56799;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+  transform-origin: left;
+}
+.section__chic .chic__sugar {
+  color: #6e4ccc;
+}
+.section__chic .chic__sugar a {
+  /* Animation pour souligner de gauche à droite entrées/plats/desserts (chic à la française) */
+  position: relative;
+  color: #6e4ccc;
+  text-decoration: none;
+}
+.section__chic .chic__sugar a:hover {
+  color: #6e4ccc;
+}
+.section__chic .chic__sugar a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.section__chic .chic__sugar a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6e4ccc;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+  transform-origin: left;
 }
 
-.grille i {
-    font-size: 0.7em;
+/* Menu Le délice des papilles */
+.section__delice {
+  background-color: #edefef;
+  font-family: "Sriracha", cursive, sans-serif;
+  font-weight: lighter;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.section__delice p {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+.section__delice .h2__delice {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #001ed9, #229df9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section__delice h3 {
+  font-size: 1.3rem;
+  font-weight: 100;
+  position: relative;
+}
+.section__delice h3::before {
+  /* Bordures de décoration */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35%;
+  left: 0px;
+  top: 50%;
+  height: 4px;
+  border-radius: 0 5rem 0 5rem;
+}
+.section__delice h3::after {
+  /* Bordures de décoration */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35%;
+  right: 0px;
+  top: 50%;
+  height: 4px;
+  border-radius: 5rem 0 5rem 0;
+}
+.section__delice h3 a {
+  /* Animation pour souligner de gauche à droite entrées/plats/desserts (délice des papilles) */
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+.section__delice h3 a:hover {
+  color: black;
+}
+.section__delice h3 a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.section__delice h3 a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+  transform-origin: left;
+}
+.section__delice .h3__commencer::before, .section__delice .h3__commencer::after {
+  background-color: #0228dd;
+}
+.section__delice .h3__continuer::before, .section__delice .h3__continuer::after {
+  background-color: #0670f3;
+}
+.section__delice .h3__terminer::before, .section__delice .h3__terminer::after {
+  background-color: #229df9;
 }
 
-.area_B {
-    font-weight: 600;
+/* Menu La palette du goût */
+.section__palette {
+  background-color: #fdfffd;
+  font-family: "Sriracha", cursive, sans-serif;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  margin-bottom: 15%;
+}
+.section__palette p {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+.section__palette .h2__palette {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #3d923a, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section__palette h3 {
+  position: relative;
+  font-weight: 100;
+}
+.section__palette h3::before {
+  /* Bordures de décoration */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35%;
+  left: 0px;
+  top: 50%;
+  height: 6px;
+  border-radius: 5rem;
+  background: linear-gradient(135deg, #3d923a, #beff7f);
+}
+.section__palette h3::after {
+  /* Bordures de décoration */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35%;
+  right: 0px;
+  top: 50%;
+  height: 6px;
+  border-radius: 5rem;
+  background: linear-gradient(135deg, #beff7f, #3d923a);
+}
+.section__palette h3 a {
+  /* Animation pour souligner de gauche à droite entrées/plats/desserts (délice des papilles) */
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+.section__palette h3 a:hover {
+  color: black;
+}
+.section__palette h3 a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.section__palette h3 a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
+  transform-origin: left;
 }
 
-/* Media Queries pour les écrans de petites tailles */
+/* Media Queries pour les écrans de petites tailles <425px */
+@media all and (max-width: 425px) {
+  @-webkit-viewport {
+    width: device-width;
+  }
+  article {
+    flex-direction: column;
+  }
 
-@media all and (max-width: 1024px) 
-{
-    #bloc_page {
-        max-width: 100%;
-        margin: auto;
-        flex-direction: column;
-    }
+  .menu_note, .menu_chic, .menu_delice, .menu_palette {
+    margin: auto;
+    margin: 3% 3%;
+  }
+}
+/* Media Queries pour les écrans de petites tailles <768px */
+@media all and (max-width: 767px) {
+  @-webkit-viewport {
+    width: device-width;
+  }
+  .section__chic h3::before, .section__chic h3::after {
+    width: 6%;
+  }
 
-    #a_propos {
-        padding-bottom: 0%;
-    }
+  .section__delice h3::before, .section__delice h3::after {
+    width: 15%;
+  }
 
-    .grid {
-        margin-bottom: 5%;
-    }
+  .section__palette h3::before, .section__palette h3::after {
+    width: 20%;
+  }
 
-    main {
-        order: 2;
-    }
+  .section__note p, .section__chic p, .section__delice p, .section__palette p {
+    padding-right: 10%;
+  }
+}
+/* Media Queries pour les écrans de petites tailles <1024px */
+@media all and (max-width: 1023px) {
+  .legal {
+    right: 17rem;
+  }
 
-    aside {
-        order: 1;
-        max-width: 100%;
-        margin: auto;
-    }
+  .contact {
+    left: 17rem;
+  }
+
+  #bloc_page {
+    min-width: 100%;
+    margin: auto;
+  }
+
+  section {
+    margin: auto;
+  }
+
+  .section__chic {
+    margin-bottom: 25%;
+  }
+
+  .section__delice {
+    margin-bottom: 25%;
+  }
+
+  .section__palette {
+    padding-bottom: 10%;
+  }
+
+  h3::before, h3::after {
+    max-width: 25%;
+  }
 }
 
-/* Media Queries pour les écrans de grandes tailles */
-
-@media all and (min-width: 2560px)
-{
-    header h2 {
-        margin-top: auto;
-    }
-
-    header h1 {
-        margin-bottom: auto;
-    }
-}
+/*# sourceMappingURL=style.css.map */
